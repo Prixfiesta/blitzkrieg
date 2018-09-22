@@ -6,11 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="371.0" prefWidth="452.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="maybethistime.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="371.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maybethistime.FXMLDocumentController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Button fx:id="login" layoutX="176.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="100.0" text="Login" />
+        <Label fx:id="label" layoutX="163.0" layoutY="44.0" minHeight="16" minWidth="69" text="Enter details to Login" />
+      <Button fx:id="login" layoutX="176.0" layoutY="245.0" mnemonicParsing="false" onAction="#login" prefHeight="33.0" prefWidth="100.0" text="Login" />
       <TextField fx:id="username" layoutX="152.0" layoutY="95.0" promptText="Username" />
       <PasswordField fx:id="password" layoutX="152.0" layoutY="161.0" promptText="Password" />
+      <Button fx:id="signupdial" layoutX="359.0" layoutY="28.0" mnemonicParsing="false" onAction="#opensignupform" text=" Sign Up?" />
     </children>
 </AnchorPane>
