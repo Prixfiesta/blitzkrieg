@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maybethistime.AddProductController">
+   <children>
+      <Button fx:id="addbut" layoutX="229.0" layoutY="310.0" mnemonicParsing="false" onAction="#addproduct" prefHeight="34.0" prefWidth="138.0" text="Add" />
+      <TextField fx:id="model" layoutX="226.0" layoutY="57.0" promptText="Product Model" />
+      <TextField fx:id="brand" layoutX="226.0" layoutY="90.0" promptText="Brand" />
+      <TextField fx:id="category" layoutX="227.0" layoutY="123.0" promptText="Category" />
+      <TextField fx:id="cost" layoutX="227.0" layoutY="158.0" promptText="Cost" />
+      <TextField fx:id="stock" layoutX="226.0" layoutY="194.0" promptText="Initial Stock" />
+      <TextField fx:id="image" layoutX="227.0" layoutY="228.0" promptText="Image File" />
+      <Button fx:id="browse" layoutX="387.0" layoutY="228.0" mnemonicParsing="false" onAction="#browsehandler" prefHeight="25.0" prefWidth="138.0" text="Browse...." />
+      <Label layoutX="261.0" layoutY="28.0" text="Add Product" />
+   </children>
+</AnchorPane>

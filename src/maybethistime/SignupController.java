@@ -39,34 +39,46 @@ Connection conn;
 
     @FXML
     void signuphandler(ActionEvent event) {
- ConnectionClass signup = new ConnectionClass();
-       conn = signup.getConnection();
-       try{ try{
-       Class.forName("com.mysql.cj.jdbc.Driver");
-       }
-       catch(ClassNotFoundException e){
-           System.out.println(e);
-       }
-       String p = password.getText();
-       String rp = repassword.getText();
-       if(p.equals(rp)){
+        ConnectionClass signup = new ConnectionClass();
+        conn = signup.getConnection();
+        try{
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                }
+        catch(ClassNotFoundException e){
+             System.out.println(e);
+        }
+        String u = username.getText();
+        String p = password.getText();
+        String rp = repassword.getText();
+            if(u.equals("")){
+            JOptionPane.showMessageDialog(null,"I am gonna need a name!");
+            }
+            else{
+            if(p.equals("")){
+            JOptionPane.showMessageDialog(null,"Enter a much much stronger password!");
+            }
+            else{
+                if(p.equals(rp)){
        //implement unique username
        
-       String query = "INSERT INTO `userdata`(`username`,`password`) VALUES ('"+username.getText()+"','"+p+"');";
-           System.out.println(query);    
-       PreparedStatement ps = conn.prepareStatement(query);
-       ps.executeUpdate();
-       }
-       else{
-           JOptionPane.showMessageDialog(null,"Passwords do not match!");
-       }
-       }
-       catch(SQLException e){
-           System.out.println(e);    
-                 
-       }
-       
+                    String query = "INSERT INTO `userdata`(`username`,`password`) VALUES ('"+u+"','"+p+"');";
+                    System.out.println(query);    
+                    PreparedStatement ps = conn.prepareStatement(query);
+                    ps.executeUpdate();
+                 }
+                else{
+                    JOptionPane.showMessageDialog(null,"Passwords do not match!");
+                }
+            }
+        }
     }
+    catch(SQLException e){
+        System.out.println(e);    
+                 
+    }
+       
+   }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
