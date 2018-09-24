@@ -13,9 +13,14 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,7 +46,22 @@ public class AddProductController implements Initializable {
 
     @FXML
     private TextField stock;
+    @FXML
+    private Button back;
+    @FXML
+    void backhandler(ActionEvent event) {
+        try{
+            Parent home_parent= FXMLLoader.load(getClass().getResource("Admindash.fxml"));
+        Scene Home= new Scene(home_parent);
 
+        Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
+        window.setScene(Home);
+        window.show();
+          }
+catch(Exception e){
+System.out.println(e);
+}
+    }
     @FXML
     private Button browse;
     @FXML

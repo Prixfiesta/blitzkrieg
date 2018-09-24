@@ -16,5 +16,6 @@
       <TextField fx:id="image" layoutX="227.0" layoutY="228.0" promptText="Image File" />
       <Button fx:id="browse" layoutX="387.0" layoutY="228.0" mnemonicParsing="false" onAction="#browsehandler" prefHeight="25.0" prefWidth="138.0" text="Browse...." />
       <Label layoutX="261.0" layoutY="28.0" text="Add Product" />
+      <Button fx:id="back" layoutX="42.0" layoutY="33.0" mnemonicParsing="false" onAction="#backhandler" text="&lt;&lt;Back" />
    </children>
 </AnchorPane>

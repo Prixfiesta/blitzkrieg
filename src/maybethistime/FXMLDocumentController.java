@@ -42,7 +42,22 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private PasswordField password;
+    @FXML
+    private Button admin;
+    @FXML
+    void openadminform(ActionEvent event) {
+        try{
+            Parent home_parent= FXMLLoader.load(getClass().getResource("Admin.fxml"));
+        Scene Home= new Scene(home_parent);
 
+        Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
+        window.setScene(Home);
+        window.show();
+          }
+catch(Exception e){
+System.out.println(e);
+}
+    }
     @FXML
     void login(ActionEvent event) {
        ConnectionClass login = new ConnectionClass();

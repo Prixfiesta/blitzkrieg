@@ -13,5 +13,6 @@
       <TextField fx:id="username" layoutX="152.0" layoutY="95.0" promptText="Username" />
       <PasswordField fx:id="password" layoutX="152.0" layoutY="161.0" promptText="Password" />
       <Button fx:id="signupdial" layoutX="359.0" layoutY="28.0" mnemonicParsing="false" onAction="#opensignupform" text=" Sign Up?" />
+      <Button fx:id="admin" layoutX="49.0" layoutY="28.0" mnemonicParsing="false" onAction="#openadminform" text="Admin?" />
     </children>
 </AnchorPane>
