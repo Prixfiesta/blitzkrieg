@@ -24,7 +24,7 @@ import javafx.stage.Stage;
  * @author dell pc
  */
 public class AdmindashController implements Initializable {
-@FXML
+    @FXML
     private Button signout;
 
     @FXML
@@ -37,7 +37,8 @@ public class AdmindashController implements Initializable {
     private Button add;
 
     @FXML
-    void addHandler(ActionEvent event) {
+    void addHandler(ActionEvent event){
+        System.out.println("da");
             try{
                      Parent home_parent= FXMLLoader.load(getClass().getResource("AddProduct.fxml"));
                  Scene Home= new Scene(home_parent);
@@ -68,7 +69,17 @@ public class AdmindashController implements Initializable {
 
     @FXML
     void viewHandler(ActionEvent event) {
+  try{
+            Parent home_parent= FXMLLoader.load(getClass().getResource("ExistingProducts.fxml"));
+        Scene Home= new Scene(home_parent);
 
+        Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
+        window.setScene(Home);
+        window.show();
+          }
+catch(Exception e){
+System.out.println(e);
+}
     }
     /**
      * Initializes the controller class.

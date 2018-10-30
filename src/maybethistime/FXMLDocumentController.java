@@ -62,12 +62,13 @@ System.out.println(e);
     void login(ActionEvent event) {
        ConnectionClass login = new ConnectionClass();
        conn = login.getConnection();
-       try{ try{
-       Class.forName("com.mysql.cj.jdbc.Driver");
-       }
-       catch(ClassNotFoundException e){
-           System.out.println(e);
-       }
+       try{ 
+           try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+            }
+            catch(ClassNotFoundException e){
+                 System.out.println(e);
+            }
        
        String query = "SELECT password FROM userdata where username='"+username.getText()+"';";
        PreparedStatement ps = conn.prepareStatement(query);
@@ -78,15 +79,15 @@ System.out.println(e);
        
        
        else{
-       if(rs.getString("password").equals(password.getText())){
-       JOptionPane.showMessageDialog(null,"Bahut ukhad liya");
+            if(rs.getString("password").equals(password.getText())){
+                JOptionPane.showMessageDialog(null,"User dash bana");
        
-       }
+            }
        
-       else{
+            else{
            
-       JOptionPane.showMessageDialog(null,"Incorrect Password");
-                    }
+                JOptionPane.showMessageDialog(null,"Incorrect Password");
+            }
        }
        
 //       else {
@@ -94,8 +95,8 @@ System.out.println(e);
 //       }
        }
        catch(SQLException e){
-           JOptionPane.showMessageDialog(null, "username not found");
-       e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "username not found");
+            e.printStackTrace();
        }
        
     }
